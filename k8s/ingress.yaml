@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: webtupoj
+  labels:
+    maintainer: maslick
+    project: sandbox
+    app: webtupoj
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: webtupoj.maslick.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: webtupoj
+              servicePort: 8080

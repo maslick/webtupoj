@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webtupoj
+  labels:
+    maintainer: maslick
+    project: sandbox
+    app: webtupoj
+spec:
+  ports:
+    - port: 8080
+      targetPort: http
+  selector:
+    maintainer: maslick
+    project: sandbox
+    app: webtupoj
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webtupoj
+  labels:
+    maintainer: maslick
+    project: sandbox
+    app: webtupoj
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      maintainer: maslick
+      project: sandbox
+      app: webtupoj
+  template:
+    metadata:
+      name: webtupoj
+      labels:
+        maintainer: maslick
+        project: sandbox
+        app: webtupoj
+    spec:
+      containers:
+        - image: maslick/webtupoj
+          imagePullPolicy: Always
+          name: webtupoj
+          ports:
+            - containerPort: 5000
+              name: http
+              protocol: TCP
+          env:
+            - name: BACKEND_URL
+              value: 'maslick.io'
