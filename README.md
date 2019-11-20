@@ -28,7 +28,7 @@ docker run -d -p 8000:5000 -e BACKEND_URL=maslick.ru maslick/webtupoj
 open http://`docker-machine ip`:8000
 ```
 
-## k8s:
+## k8s
 ```
 kubectl apply -f k8s
 k set env deploy citatos BACKEND_URL=www.goog.li
