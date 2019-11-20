@@ -1,10 +1,10 @@
 from quote import quote
+from os import getenv
 
 
 def index():
     resp = dict()
-    resp["welcome"] = 'Welcome to web2py!'
-    resp["message"] = 'Hello World!!!'
+    resp["message"] = 'BACKEND_URL=' + getenv("BACKEND_URL", "ya.ru")
     return resp
 
 

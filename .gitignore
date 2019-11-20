@@ -3,7 +3,7 @@ site-packages
 deposit
 .idea
 
-applications/welcome/errors
+applications/webtupoj/errors
 applications/admin/sessions
 
 venv
