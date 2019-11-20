@@ -1,0 +1,9 @@
+logs
+site-packages
+deposit
+.idea
+
+applications/welcome/errors
+applications/admin/sessions
+
+venv
