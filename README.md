@@ -1,5 +1,7 @@
 # Web tupoj
 
+[![image size](https://img.shields.io/badge/image%20size-340MB-blue.svg)](https://hub.docker.com/r/maslick/webtupoj)
+
 ### Installation
 ```
 pip3 install -r requirements.txt
@@ -17,4 +19,11 @@ python3 web2py.py -i 0.0.0.0 -p 8080 -a pwd
 docker build -t maslick/webtupoj .
 docker run -d -p 8000:5000 -e BACKEND_URL=maslick.ru maslick/webtupoj
 open http://`docker-machine ip`:8000
+```
+
+### k8s:
+```
+kubectl apply -f k8s
+k set env deploy citatos BACKEND_URL=www.goog.li
+open http://webtupoj.maslick.io
 ```
