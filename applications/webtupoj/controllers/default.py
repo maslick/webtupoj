@@ -1,3 +1,5 @@
+import random
+
 from quote import quote
 from os import getenv
 
@@ -12,7 +14,8 @@ def quotes():
     resp = dict()
 
     citations = []
-    for q in quote('Pushkin', limit=5):
+    authors = ["pushkin", "chekhov", "lermontov", "azimov", "pasternak", "bulgakov", "lenin", "strugatsky", "gumilyov", "akhmatova", "fet"]
+    for q in quote(random.choice(authors), limit=5):
         row = dict()
         row["author"] = q["author"]
         row["quote"] = q["quote"]
