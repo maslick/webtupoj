@@ -1,0 +1,9 @@
+<h1>Quotes</h1>
+
+<div>
+    {{for cit in citations:}}
+        <p>{{=cit["author"]}} : {{=cit["quote"]}}</p>
+    {{pass}}
+</div>
+
+<a href="index">back</a>

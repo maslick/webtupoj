@@ -7,3 +7,9 @@ applications/welcome/errors
 applications/admin/sessions
 
 venv
+
+httpserver.pid
+httpserver.log
+
+parameters_*
+welcome.w2p
