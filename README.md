@@ -18,8 +18,19 @@ WEB2PY_VERSION=R-2.18.5
 WEB2PY_ADMIN_SECURITY_BYPASS=true
 WEB2PY_PASSWORD=pwd
 
-python3 -m unittest discover applications/webtupoj/tests
 python3 web2py.py -i 0.0.0.0 -p 8080 -a pwd
+```
+
+## Testing
+* Unit testing
+```
+python3 -m unittest discover applications/webtupoj/tests/unit
+```
+
+* Integration testing
+```
+python3 web2py.py -i 0.0.0.0 -p 8080 -a pwd
+python3 -m unittest discover applications/webtupoj/tests/integration
 ```
 
 ## Docker

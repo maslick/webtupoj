@@ -5,6 +5,8 @@ deposit
 
 applications/webtupoj/errors
 applications/admin/sessions
+applications/admin/errors
+
 
 venv
 
