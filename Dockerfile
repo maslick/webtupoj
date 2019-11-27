@@ -12,6 +12,7 @@ RUN rm -fr applications/admin && \
     cp handlers/wsgihandler.py .
 
 RUN useradd -m -r  web2py
+RUN chown -R web2py:web2py /app
 USER web2py
 EXPOSE 5000
 
