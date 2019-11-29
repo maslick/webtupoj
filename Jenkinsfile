@@ -18,6 +18,10 @@ metadata:
     job: build-service
 spec:
   containers:
+  - name: python
+    image: python:3.7
+    command: ["cat"]
+    tty: true
   - name: docker
     image: docker:18.09.2
     command: ["cat"]
@@ -29,10 +33,6 @@ spec:
   - name: docker-sock
     hostPath:
       path: /var/run/docker.sock
-  - name: python
-    image: python:3.7
-    command: ["cat"]
-    tty: true
 """
         }
     }
