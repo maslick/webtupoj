@@ -57,7 +57,7 @@ spec:
         stage ('build') {
             steps {
                 container('docker') {
-                    sh "docker build . -t ${imageName}:${revision} -f docker/Dockerfile"
+                    sh "docker build . -t ${imageName}:${revision}"
                 }
             }
         }
