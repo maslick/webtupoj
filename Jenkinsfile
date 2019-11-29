@@ -54,18 +54,18 @@ spec:
                 }
             }
         }
-        stage ('build') {
-            steps {
-                container('docker') {
-                    sh "docker build . -t ${imageName}:${revision}"
-                }
-            }
-        }
         stage ('test') {
             steps {
                 container('python') {
                     sh "pip3 install -r requirements.txt"
                     sh "python3 -m unittest discover applications/webtupoj/tests/unit"
+                }
+            }
+        }
+        stage ('build') {
+            steps {
+                container('docker') {
+                    sh "docker build . -t ${imageName}:${revision}"
                 }
             }
         }
