@@ -64,6 +64,7 @@ spec:
         stage ('test') {
             steps {
                 container('python') {
+                    sh "pip3 install -r requirements.txt"
                     sh "python3 -m unittest discover applications/webtupoj/tests/unit"
                 }
             }
