@@ -2,7 +2,7 @@ def branch
 def revision
 def registryIp
 def buildName = "build-webtupoj"
-def imageName = "webtupoy"
+def imageName = "webtupoj"
 def registryName = "docker-registry.regionview.ru"
 
 pipeline {
